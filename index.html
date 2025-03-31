@@ -239,7 +239,7 @@
 
 <footer class="footer">
     <div class="container">
-        <div class="column">
+        <div class="column__tea">
             <h3>Products</h3>
             <ul>
                 <li><a href="#">Black tea</a></li>
@@ -248,10 +248,12 @@
                 <li><a href="#">Oolong tea</a></li>
                 <li><a href="#">Pu'erh tea</a></li>
             </ul>
-            <p>&copy; TeaLuxe, 2023</p>
+            <div class="rights">
+                <p>&copy; TeaLuxe, 2023</p>
+            </div>
         </div>
 
-        <div class="column">
+        <div class="column__credits">
             <h3>Company</h3>
             <ul>
                 <li><a href="#">About Us</a></li>
@@ -263,27 +265,40 @@
                 <li><a href="#">Terms of Service</a></li>
             </ul>
             <div class="credits">
-                <div class="credits__images">
-                    <img src="img/icon-visa.png" alt="Visa">
-                    <img src="img/icon-mastercard.png" alt="MasterCard">
-                    <img src="img/icon-google-pay.png" alt="GooglePay">
-                    <img src="img/icon-paypal.png" alt="PayPal">
-                </div>
+                <img src="img/icon-visa.png" alt="Visa">
+                <img src="img/icon-mastercard.png" alt="MasterCard">
+                <img src="img/icon-google-pay.png" alt="GooglePay">
+                <img src="img/icon-paypal.png" alt="PayPal">
             </div>
         </div>
 
-        <div class="column">
+        <div class="column__journey">
             <h3>“Tea is a journey”</h3>
             <h2>"Tea is a journey. It can take you to new places and open your mind to new experiences. Let every sip
                 transport you to a world of wonder and possibility."</h2>
-            <p>Dragonfly Teadoreous, TeaLuxe owner</p>
+            <p class="column__journey-text">Dragonfly Teadoreous, TeaLuxe owner</p>
         </div>
 
         <div class="column-contact">
-            <h3>Stay In Touch</h3>
-            <p>Please feel free to contact us via the email or phone. We would be happy to hear from you!</p>
-            <p><strong>+370 698 123456</strong></p>
-            <p><a href="mailto:info@tealuxe.com">info@tealuxe.com</a></p>
+            <h3 class="column-contact__header">Stay In Touch</h3>
+            <div class="column-contact__text">
+                <div class="column-contact__text-item_text">
+                    <p>Please feel free to contact us via the email or phone. We would be happy to hear from you!</p>
+                </div>
+                <div class="column-contact__text-data_contact-block">
+                    <img src="img/tea-footer.png" alt="Tea in footer">
+                    <div class="column-contact__text-data_contact-text">
+                        <div class="column-contact__text-item_phone">
+                            <img src="img/phone-icon.svg" alt="Phone in footer">
+                            <p><strong>+370 698 123456</strong></p>
+                        </div>
+                        <div class="column-contact__text-item_mail">
+                            <img src="img/mail-icon.svg" alt="Mail in footer">
+                            <p><a href="mailto:info@tealuxe.com">info@tealuxe.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="social-icons">
                 <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
                 <a href="#"><img src="img/youtube.png" alt="YouTube"></a>
