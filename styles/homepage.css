@@ -56,13 +56,14 @@ nav a:hover {
 .main {
     padding: 0;
     background-image: url("/img/tea-field-main.png");
+    background-position: left center;
     background-size: cover;
-    background-position: center;
-    min-height: 50vh;
+    max-height: 100vh;
 }
 
 .hero {
-    width: 60%;
+    min-width: 300px;
+    max-width: 960px;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -89,11 +90,10 @@ nav a:hover {
 
 .quote {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: center;
     text-align: center;
-    font-style: italic;
-    font-size: 24px;
     padding: 100px 0 50px 0;
 }
 
@@ -101,6 +101,7 @@ nav a:hover {
     display: flex;
     justify-content: center;
     width: 45%;
+    min-width: 400px;
     font-family: "Cormorant", serif;
     font-size: 40px;
     font-style: italic;
@@ -337,7 +338,6 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*border-bottom: 1px solid #ccc;*/
 }
 
 .subscribe__form h2 {
@@ -602,5 +602,98 @@ nav a:hover {
 
     .footer .container {
         gap: unset;
+    }
+
+    .quote__title {
+        width: 60%; /* Немного расширяем контейнер для текста */
+    }
+}
+
+@media (max-width: 1000px){
+
+    section {
+        padding: 0 2vw;
+    }
+
+    header {
+        padding: 30px 0;
+    }
+
+    .menu__list {
+        gap: 40px;
+    }
+
+    .user-actions__item:last-child {
+        margin-left: 10px;
+    }
+
+    .main {
+        background-image: url("/img/tea-filed-main-1000.png");
+    }
+
+    .hero {
+        width: 100%;
+        max-width: 800px;
+        padding: 250px 0 30px 30px;
+    }
+
+    .hero__item-title {
+        width: 100%;
+    }
+
+    .quote__title {
+        width: 70%; /* Даем больше места тексту */
+    }
+
+    .collections-items {
+        flex-wrap: wrap;
+    }
+
+    .testimonials__items {
+        min-height: 280px;
+        flex-wrap: wrap;
+    }
+
+    .testimonials__items-item{
+        min-width: 300px;
+    }
+
+    .testimonials {
+        padding: 100px 41px;
+    }
+
+    .subscribe {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .subscribe__text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .subscribe__text h2, .subscribe__text p {
+        text-align: center;
+    }
+
+    .subscribe__form {
+        margin: 50px 200px 0 0;
+        max-width: 560px;
+        min-width: 560px;
+    }
+
+    .footer {
+        padding: 90px 10px 20px 30px;
+    }
+
+    .column-contact__text {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .quote__title {
+        width: 80%; /* Делаем контейнер шире на мобильных */
     }
 }
