@@ -18,6 +18,32 @@
 
 <body>
 <header>
+    <div id="mob_menu">
+        <input id="menu__toggle" type="checkbox" data-nav-target="mobMenuTrigger">
+        <label class="menu__btn" for="menu__toggle" data-action="click->nav#onShowMobileMenu">
+            <span></span>
+        </label>
+        <div id="mob-items">
+            <div class="mob-nav-item">
+                <a href="#">Balíček materiálov</a>
+            </div>
+            <div class="mob-nav-item">
+                <a href="#">Wartości</a>
+            </div>
+            <div class="mob-nav-item">
+                <a href="#">Lista wyróżnionych</a>
+            </div>
+            <div class="mob-nav-item">
+                <a href="#">Materiały</a>
+            </div>
+            <div class="mob-nav-item">
+                <a href="#">Regulamin</a>
+            </div>
+            <div class="mob-nav-btn">
+                <a href="#">zgłoś sIę</a>
+            </div>
+        </div>
+    </div>
     <img class="header-logo" src="img/logo.svg" alt="Logo">
     <nav>
         <ul class="menu__list">
@@ -214,38 +240,38 @@
 <section class="priorities">
     <h2>We Prioritise</h2>
     <div class="features">
-<!--        <div class="features__top">-->
-            <div class="feature">
-                <img src="img/earth.png" alt="Earth">
-                <div class="feature__text">
-                    <p>Complete transparency</p>
-                    <h3>Single garden teas</h3>
-                </div>
+        <!--        <div class="features__top">-->
+        <div class="feature">
+            <img src="img/earth.png" alt="Earth">
+            <div class="feature__text">
+                <p>Complete transparency</p>
+                <h3>Single garden teas</h3>
             </div>
-            <div class="feature">
-                <img src="img/leafes.png" alt="Leafes">
-                <div class="feature__text">
-                    <p>Best Drinking Experience</p>
-                    <h3>Only Loose leaf tea</h3>
-                </div>
+        </div>
+        <div class="feature">
+            <img src="img/leafes.png" alt="Leafes">
+            <div class="feature__text">
+                <p>Best Drinking Experience</p>
+                <h3>Only Loose leaf tea</h3>
             </div>
-<!--        </div>-->
-<!--        <div class="features__bottom">-->
-            <div class="feature">
-                <img src="img/headphones.png" alt="Headphones">
-                <div class="feature__text">
-                    <p>No bots, no automated replies</p>
-                    <h3>Customer support</h3>
-                </div>
+        </div>
+        <!--        </div>-->
+        <!--        <div class="features__bottom">-->
+        <div class="feature">
+            <img src="img/headphones.png" alt="Headphones">
+            <div class="feature__text">
+                <p>No bots, no automated replies</p>
+                <h3>Customer support</h3>
             </div>
-            <div class="feature">
-                <img src="img/box.png" alt="Fast Shipping Icon">
-                <div class="feature__text">
-                    <p>Save, Convenient, Reliable</p>
-                    <h3>Fast shipping</h3>
-                </div>
+        </div>
+        <div class="feature">
+            <img src="img/box.png" alt="Fast Shipping Icon">
+            <div class="feature__text">
+                <p>Save, Convenient, Reliable</p>
+                <h3>Fast shipping</h3>
             </div>
-<!--        </div>-->
+        </div>
+        <!--        </div>-->
     </div>
 </section>
 
@@ -283,39 +309,42 @@
                 <img src="img/icon-paypal.png" alt="PayPal">
             </div>
         </div>
+        <div class="column__journey__contact">
+            <div class="column__journey">
+                <h3>“Tea is a journey”</h3>
+                <h2>"Tea is a journey. It can take you to new places and open your mind to new experiences. Let every
+                    sip
+                    transport you to a world of wonder and possibility."</h2>
+                <p class="column__journey-text">Dragonfly Teadoreous, TeaLuxe owner</p>
+            </div>
 
-        <div class="column__journey">
-            <h3>“Tea is a journey”</h3>
-            <h2>"Tea is a journey. It can take you to new places and open your mind to new experiences. Let every sip
-                transport you to a world of wonder and possibility."</h2>
-            <p class="column__journey-text">Dragonfly Teadoreous, TeaLuxe owner</p>
-        </div>
-
-        <div class="column-contact">
-            <h3 class="column-contact__header">Stay In Touch</h3>
-            <div class="column-contact__text">
-                <div class="column-contact__text-item_text">
-                    <p>Please feel free to contact us via the email or phone. We would be happy to hear from you!</p>
-                </div>
-                <div class="column-contact__text-data_contact-block">
-                    <img src="img/tea-footer.png" alt="Tea in footer">
-                    <div class="column-contact__text-data_contact-text">
-                        <div class="column-contact__text-item_phone">
-                            <img src="img/phone-icon.svg" alt="Phone in footer">
-                            <p>+370 698 123456</p>
-                        </div>
-                        <div class="column-contact__text-item_mail">
-                            <img src="img/mail-icon.svg" alt="Mail in footer">
-                            <p><a href="mailto:info@tealuxe.com">info@tealuxe.com</a></p>
+            <div class="column-contact">
+                <h3 class="column-contact__header">Stay In Touch</h3>
+                <div class="column-contact__text">
+                    <div class="column-contact__text-item_text">
+                        <p>Please feel free to contact us via the email or phone. We would be happy to hear from
+                            you!</p>
+                    </div>
+                    <div class="column-contact__text-data_contact-block">
+                        <img src="img/tea-footer.png" alt="Tea in footer">
+                        <div class="column-contact__text-data_contact-text">
+                            <div class="column-contact__text-item_phone">
+                                <img src="img/phone-icon.svg" alt="Phone in footer">
+                                <p>+370 698 123456</p>
+                            </div>
+                            <div class="column-contact__text-item_mail">
+                                <img src="img/mail-icon.svg" alt="Mail in footer">
+                                <p><a href="mailto:info@tealuxe.com">info@tealuxe.com</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="social-icons">
-                <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="img/youtube.png" alt="YouTube"></a>
-                <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+                <div class="social-icons">
+                    <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="img/youtube.png" alt="YouTube"></a>
+                    <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+                </div>
             </div>
         </div>
     </div>

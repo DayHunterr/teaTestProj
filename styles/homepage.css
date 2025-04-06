@@ -13,7 +13,10 @@ header {
     align-items: center;
     background-color: #fff;
     padding: 30px 70px;
+}
 
+#mob_menu {
+    display: none;
 }
 
 nav {
@@ -454,12 +457,21 @@ nav a:hover {
 .footer .container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 87px;
 }
 
-.footer .column__tea, .column__credits, .column__journey {
+.footer .column__tea {
     max-width: 200px;
+    min-width: 125px;
+}
+
+.footer .column__credits {
+    min-width: 140px;
+}
+
+.column__journey {
+    max-width: 250px;
 }
 
 .footer h2 {
@@ -467,7 +479,7 @@ nav a:hover {
     font-size: 16px;
     font-style: italic;
     font-weight: 300;
-    width: 122%;
+    width: 100%;
 }
 
 .footer h3 {
@@ -526,6 +538,13 @@ nav a:hover {
 /*    width: 100%;*/
 /*}*/
 
+.column__journey__contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
 .column__journey-text {
     font-weight: 300;
     font-size: 12px;
@@ -539,13 +558,13 @@ nav a:hover {
 
 .footer .column-contact {
     margin-left: 50px;
-    max-width: 28%;
+    max-width: 41%;
 }
 
 .column-contact__text {
     display: flex;
     flex-direction: column;
-    width: 85%;
+    width: 100%;
 }
 
 .column-contact__text-data_contact-block {
@@ -563,12 +582,15 @@ nav a:hover {
 }
 
 .column-contact__text-item_text {
+    max-width: 350px;
     font-size: 13px;
     font-weight: 300;
 }
 
 .column-contact__text-data_contact-text p {
     margin-left: 15px;
+    font-size: 13px;
+    font-weight: 300;
 }
 
 .column-contact__text img {
@@ -600,8 +622,12 @@ nav a:hover {
 
 @media (max-width: 1250px) {
 
+    .column-contact__text-data_contact-text {
+        min-width: 145px;
+    }
+
     .footer .container {
-        gap: unset;
+        gap: 45px;
     }
 
     .quote__title {
@@ -686,14 +712,164 @@ nav a:hover {
         padding: 90px 10px 20px 30px;
     }
 
-    .column-contact__text {
+    .footer .container {
+        gap: unset;
+    }
+    .footer .column-contact {
+        margin-left: 0;
+        width: 278px;
+        max-width: 100%;
+    }
+
+    .column-contact__text-data_contact-text p {
+        margin-left: 10px;
+    }
+
+
+        .column-contact__text {
         width: 100%;
     }
 
 }
 
 @media (max-width: 768px) {
+
+    nav {
+        display: none;
+    }
+
     .quote__title {
         width: 80%; /* Делаем контейнер шире на мобильных */
+    }
+
+    #mob_menu {
+        display: block;
+        position: relative;
+    }
+
+    #menu__toggle:checked ~ .menu__btn {
+        position: fixed;
+        top: 34px;
+        right: 24px;
+    }
+
+    #menu__toggle:checked ~ #mob-items {
+        visibility: visible;
+        left: 0;
+    }
+
+    #mob_menu__toggle {
+        opacity: 0;
+    }
+
+    .menu__btn {
+        position: absolute;
+        top: 15px;
+        right: 3px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 34px;
+        height: 3px;
+        background-color: black;
+        transition: .3s;
+        border-radius: 15px;
+    }
+
+    .menu__btn > span::before {
+        content: '';
+        top: -10px;
+    }
+
+    .menu__btn > span {
+        top: -4px;
+    }
+
+    .menu__btn > span::after {
+        content: '';
+        top: 10px;
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+
+    #mob-items {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        right: -100%;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+        transition: .3s linear;
+        z-index: 99;
+        padding-top: 60px;
+    }
+
+    .mob-nav-item {
+        padding: 12px 0 12px 28px;
+        color: #000;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .mob-nav-item {
+        border-bottom: 1px solid #fff;
+    }
+
+    .mob-nav-item {
+        color: #FFF;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+        padding: 12px 0 12px 28px;
+    }
+
+    .mob-nav-btn {
+        color: #FFF;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 12px;
+    }
+
+    .mob-nav-btn a {
+        border-radius: 5px;
+        background: #85644E;
+        padding: 12px 120px;
+    }
+
+    .column__journey__contact {
+        flex-direction: column;
     }
 }
