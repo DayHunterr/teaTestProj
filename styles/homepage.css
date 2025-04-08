@@ -2,6 +2,10 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+body.menu-open {
+    overflow: hidden;
+}
+
 section {
     padding: 0 10vw;
 }
@@ -39,6 +43,15 @@ nav {
 
 .user-actions__item:last-child {
     margin-left: 70px;
+}
+
+.mob-user-actions {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+    justify-content: space-around;
+    background-color: #F7F2EA;
+    padding: 20px 40px;
 }
 
 nav a {
@@ -737,6 +750,16 @@ nav a:hover {
         display: none;
     }
 
+    .mob-nav-row {
+        border-bottom: 2px solid;
+        border-bottom-color: #F7F2EA;
+        margin: 50px 0;
+    }
+
+    .user-actions__item:last-child {
+        margin-left: 0;
+    }
+
     .quote__title {
         width: 80%; /* Делаем контейнер шире на мобильных */
     }
@@ -748,6 +771,7 @@ nav a:hover {
     }
 
     #menu__toggle:checked ~ .menu__btn {
+        display: none;
         position: fixed;
         top: 34px;
         right: 24px;
@@ -755,7 +779,8 @@ nav a:hover {
 
     #menu__toggle:checked ~ #mob-items {
         visibility: visible;
-        left: 0;
+        top: 0;
+        opacity: 1;
     }
 
     #mob_menu__toggle {
@@ -765,7 +790,7 @@ nav a:hover {
     .menu__btn {
         position: absolute;
         top: 15px;
-        right: 70px;
+        right: 24px;
         width: 26px;
         height: 26px;
         cursor: pointer;
@@ -814,17 +839,21 @@ nav a:hover {
 
 
     #mob-items {
-        display: block;
         position: fixed;
+        top: -100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 360px;
+        max-width: 100%;
+        background-color: #fff; /* Цвет фона меню */
+        z-index: 998;
         visibility: hidden;
-        right: -100%;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: #000;
-        transition: .3s linear;
-        z-index: 99;
-        padding-top: 60px;
+        opacity: 0;
+        transition: all 0.4s ease;
+    }
+
+    #mob-items-text {
+        padding: 40px 20px;
     }
 
     .mob-nav-item {
@@ -839,24 +868,24 @@ nav a:hover {
     }
 
     .mob-nav-item {
-        color: #FFF;
-        font-family: 'Inter', sans-serif;
-        font-size: 16px;
+        /*color: #FFF;*/
+        text-align: center;
+        font-family: Cormorant,sans-serif;
+        font-size: 24px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         text-transform: capitalize;
-        padding: 12px 0 12px 28px;
+        padding: 12px 28px 12px 28px;
     }
 
     .mob-nav-btn {
-        color: #FFF;
-        font-family: 'Inter', sans-serif;
-        font-size: 14px;
+        color: #000;
+        font-family: "Open Sans",sans-serif;
+        font-size: 13px;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 300;
         line-height: normal;
-        text-transform: uppercase;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -865,8 +894,39 @@ nav a:hover {
 
     .mob-nav-btn a {
         border-radius: 5px;
-        background: #85644E;
-        padding: 12px 120px;
+        padding: 12px 70px;
+    }
+
+    .menu__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 32px;
+        height: 32px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 20;
+    }
+
+    .menu__close::before,
+    .menu__close::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 24px;
+        height: 2px;
+        background-color: #5c452c; /* Цвет линий крестика */
+        transform-origin: center;
+    }
+
+    .menu__close::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .menu__close::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
     }
 
     .priorities .features {
@@ -924,6 +984,9 @@ nav a:hover {
 
     .footer .container {
         flex-wrap: wrap;
+        align-items: flex-end;
+        align-content: stretch;
+        justify-content: space-evenly;
     }
 }
 
